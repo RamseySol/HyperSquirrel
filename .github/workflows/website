@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Chosen Palette: "Vibrant Dark" - A dark mode theme using shades of gray (bg-gray-900, bg-gray-800) to create a modern, tech-focused feel. Accents of bright yellow (#facc15) and orange (#f97316) are used for gradients and calls-to-action to convey energy, speed, and excitement, aligning with the "HyperSquirrel" brand. -->
+    <!-- Application Structure Plan: The SPA uses a simple, linear, single-page structure focused on immediate impact and clear communication, which is ideal for a meme coin launch. The structure consists of: 1) A sticky header for persistent navigation and branding. 2) An above-the-fold Hero Section with a bold tagline and a primary call-to-action ("Buy Now") to capture user attention instantly. 3) An "About" section with feature cards to quickly convey the project's value propositions (speed, community, fair launch). This top-down flow is designed to guide the user from brand introduction to value proposition and finally to the conversion action with minimal friction. -->
+    <!-- Visualization & Content Choices: Report Info: Project value propositions (Speed, Community, Fair Launch). -> Goal: Inform and build trust. -> Viz/Presentation Method: Thematic icon-driven feature cards using structured HTML/CSS and Unicode characters. -> Interaction: Subtle hover-and-scale effects on cards to provide interactive feedback. -> Justification: For a meme coin without historical data, traditional charts are irrelevant. Icon-based cards are more effective for communicating core concepts quickly and visually, reinforcing the brand identity. The goal is persuasion and branding, not data analysis. -> Library/Method: Tailwind CSS for layout and styling; Unicode/Emoji for icons. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HyperSquirrel: The Fastest Nut on Solana</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .text-gradient {
+            background-image: linear-gradient(to right, #facc15, #f97316);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .button-gradient {
+            background-image: linear-gradient(to right, #facc15, #f97316);
+        }
+        .glow {
+            text-shadow: 0 0 8px rgba(250, 204, 21, 0.6), 0 0 12px rgba(249, 115, 22, 0.4);
+        }
+        .icon {
+            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 antialiased overflow-x-hidden">
+
+    <!-- Header -->
+    <header class="p-6 bg-gray-800 shadow-lg sticky top-0 z-50 rounded-b-3xl">
+        <nav class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <!-- HyperSquirrel Emoji Logo -->
+                <span class="text-4xl icon" role="img" aria-label="Squirrel emoji">🐿️</span>
+                <span class="text-3xl font-black text-white glow">HyperSquirrel</span>
+            </div>
+            <a href="https://pump.fun/" target="_blank" class="px-6 py-2 button-gradient rounded-full font-bold text-gray-900 shadow-md hover:scale-105 transition-transform duration-300">
+                Launch on pump.fun
+            </a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="min-h-screen flex items-center justify-center p-6 bg-gray-900 relative overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <!-- Simple animated background to simulate fast movement -->
+                <div class="absolute inset-0 opacity-10 animate-pulse">
+                    <div class="h-1/2 w-full bg-yellow-400 rotate-12 -translate-x-1/2 -translate-y-1/2"></div>
+                    <div class="h-1/2 w-full bg-orange-500 rotate-12 -translate-x-1/2 translate-y-1/2"></div>
+                </div>
+            </div>
+            <div class="relative z-10 text-center max-w-4xl">
+                <h1 class="text-6xl sm:text-7xl lg:text-8xl font-black mb-4 leading-tight text-white glow">
+                    The Fastest <span class="text-gradient">Nut</span> on Solana.
+                </h1>
+                <p class="text-xl sm:text-2xl text-gray-400 mb-8 font-medium">
+                    $NUTZ is a community-driven meme coin for those who live life in the fast lane and never stop collecting gains. Launched on pump.fun, we're all about high energy, low fees, and maximum fun.
+                </p>
+                <a href="https://pump.fun/" target="_blank" class="inline-block px-8 py-4 button-gradient rounded-full text-lg font-bold text-gray-900 shadow-xl hover:scale-105 transition-transform duration-300 transform-gpu">
+                    Buy $NUTZ Now!
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="py-20 px-6 bg-gray-950">
+            <div class="container mx-auto">
+                <h2 class="text-4xl sm:text-5xl font-extrabold text-center text-white mb-12">
+                    Why HyperSquirrel?
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Feature Card 1 -->
+                    <div class="bg-gray-800 p-8 rounded-2xl shadow-xl border border-gray-700 hover:scale-105 transition-transform duration-300">
+                        <div class="flex items-center justify-center w-16 h-16 bg-yellow-400 rounded-full mb-6 mx-auto text-4xl">
+                            ⚡
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4 text-center">Fast & Furious</h3>
+                        <p class="text-gray-400 text-center">
+                            Leveraging Solana's lightning-fast network, $NUTZ transactions are quicker than a squirrel on a coffee binge. Low fees, high speed.
+                        </p>
+                    </div>
+                    <!-- Feature Card 2 -->
+                    <div class="bg-gray-800 p-8 rounded-2xl shadow-xl border border-gray-700 hover:scale-105 transition-transform duration-300">
+                        <div class="flex items-center justify-center w-16 h-16 bg-orange-500 rounded-full mb-6 mx-auto text-4xl">
+                            🧑‍🤝‍🧑
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4 text-center">Community Power</h3>
+                        <p class="text-gray-400 text-center">
+                            We're a decentralized army of squirrels, united by our love for memes and fast-paced gains. The community is the core of everything we do.
+                        </p>
+                    </div>
+                    <!-- Feature Card 3 -->
+                    <div class="bg-gray-800 p-8 rounded-2xl shadow-xl border border-gray-700 hover:scale-105 transition-transform duration-300">
+                        <div class="flex items-center justify-center w-16 h-16 bg-yellow-400 rounded-full mb-6 mx-auto text-4xl">
+                            🚀
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4 text-center">Fair Launch</h3>
+                        <p class="text-gray-400 text-center">
+                            Launched on pump.fun for a 100% fair distribution. No presales, no team tokens. Everyone starts from the same place.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="p-6 bg-gray-800 text-center text-gray-500 rounded-t-3xl">
+        <p>&copy; 2025 HyperSquirrel. All rights reserved. Not financial advice.</p>
+    </footer>
+
+    <script>
+        // This file can be used for future functionality, such as a live price ticker
+        // or animations. It is currently empty as all functionality is in the HTML and CSS.
+
+        // Example:
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('HyperSquirrel website loaded!');
+        });
+    </script>
+</body>
+</html>
